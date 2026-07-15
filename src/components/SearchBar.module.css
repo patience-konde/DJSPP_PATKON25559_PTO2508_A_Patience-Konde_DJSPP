@@ -1,0 +1,36 @@
+.form {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  min-width: 200px;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--grey-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: var(--background);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .form {
+    width: 100%;
+  }
+
+  .input {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+}

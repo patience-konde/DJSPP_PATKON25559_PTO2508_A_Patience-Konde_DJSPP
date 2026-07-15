@@ -1,0 +1,125 @@
+﻿* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #e0e7ff;
+  --grey-text: #666;
+  --grey-light: #f3f4f6;
+  --grey-border: #e5e7eb;
+  --success: #10b981;
+  --background: #ffffff;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="dark"] {
+  --primary-color: #818cf8;
+  --primary-dark: #6366f1;
+  --primary-light: #312e81;
+  --grey-text: #cbd5e1;
+  --grey-light: #111827;
+  --grey-border: #334155;
+  --background: #0f172a;
+  --shadow-sm: 0 1px 2px rgba(2, 6, 23, 0.35);
+  --shadow: 0 10px 25px rgba(2, 6, 23, 0.35);
+  --shadow-lg: 0 16px 35px rgba(2, 6, 23, 0.42);
+}
+
+:root[data-theme="light"] {
+  --primary-color: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #e0e7ff;
+  --grey-text: #666;
+  --grey-light: #f3f4f6;
+  --grey-border: #e5e7eb;
+  --background: #ffffff;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  background: var(--grey-light);
+  color: var(--grey-text);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input,
+select {
+  font-family: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--grey-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--grey-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}

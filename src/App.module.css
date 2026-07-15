@@ -1,0 +1,219 @@
+.appShell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 96px;
+}
+
+.pageLayout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background-color: var(--background);
+  border-bottom: 1px solid var(--grey-border);
+  align-items: center;
+  box-shadow: var(--shadow-sm);
+  max-width: 100%;
+}
+
+.recommendationSection {
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.recommendationHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: end;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.76rem;
+  color: var(--primary-dark);
+  margin-bottom: 0.35rem;
+}
+
+.recommendationHeader h2 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.recommendationCopy {
+  margin: 0;
+  max-width: 40ch;
+  color: var(--grey-text);
+}
+
+.carouselControls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.recommendationCarousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 0.2rem 0.2rem 0.45rem;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
+}
+
+.recommendationCarousel::-webkit-scrollbar {
+  display: none;
+}
+
+.recommendationCard {
+  flex: 0 0 min(280px, 80vw);
+  background: var(--background);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--grey-border);
+  scroll-snap-align: start;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.recommendationCard:hover,
+.recommendationCard:focus-visible {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.14);
+  border-color: var(--primary-dark);
+}
+
+.recommendationCard img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  transition: transform 220ms ease;
+}
+
+.recommendationCard:hover img,
+.recommendationCard:focus-visible img {
+  transform: scale(1.04);
+}
+
+.recommendationCard > div {
+  padding: 0.9rem 1rem 1rem;
+}
+
+.carouselButton {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: var(--background);
+  color: var(--primary-dark);
+  border: 1px solid var(--grey-border);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.carouselButton:hover,
+.carouselButton:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.12);
+  border-color: var(--primary-dark);
+}
+
+.recommendationCard h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.recommendationCard p {
+  margin: 0;
+  color: var(--grey-text);
+  font-size: 0.92rem;
+}
+
+.controls > * {
+  min-width: 200px;
+}
+
+.loadingMessage,
+.errorMessage {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--grey-text);
+}
+
+.errorMessage {
+  color: #b91c1c;
+}
+
+@media (max-width: 900px) {
+  .carouselControls {
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .controls {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .controls > * {
+    min-width: 100%;
+    width: 100%;
+  }
+
+  .recommendationSection {
+    padding: 1rem;
+  }
+
+  .recommendationHeader {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .carouselControls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .recommendationCarousel {
+    width: 100%;
+  }
+
+  .carouselButton {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .recommendationSection {
+    padding: 0.85rem;
+  }
+
+  .recommendationHeader h2 {
+    font-size: 1.1rem;
+  }
+
+  .recommendationCopy {
+    font-size: 0.92rem;
+  }
+}

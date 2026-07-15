@@ -1,0 +1,251 @@
+.pageShell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem 1.4rem;
+  border-radius: 20px;
+  background: var(--background);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--grey-border);
+}
+
+.headingBlock {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.74rem;
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin: 0;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--grey-text);
+  max-width: 52ch;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.label {
+  font-size: 0.92rem;
+  color: var(--grey-text);
+}
+
+.select {
+  padding: 0.7rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--grey-border);
+  background: var(--background);
+  color: inherit;
+}
+
+.groups {
+  display: grid;
+  gap: 1rem;
+}
+
+.groupCard {
+  background: var(--background);
+  border-radius: 20px;
+  padding: 1rem 1.1rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--grey-border);
+}
+
+.groupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.groupHeader h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.groupHeader span {
+  color: var(--grey-text);
+  font-size: 0.9rem;
+}
+
+.list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.itemCard {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  background: rgba(99, 102, 241, 0.06);
+}
+
+.itemMain {
+  flex: 1;
+}
+
+.itemBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.3rem 0.65rem;
+  border-radius: 999px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.45rem;
+}
+
+.itemMain h3 {
+  margin: 0 0 0.2rem;
+}
+
+.meta {
+  margin: 0;
+  color: var(--grey-text);
+  font-size: 0.9rem;
+}
+
+.itemActions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.linkButton,
+.heartButton {
+  border-radius: 999px;
+  padding: 0.62rem 0.9rem;
+  font-weight: 600;
+}
+
+.linkButton {
+  text-decoration: none;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+}
+
+.heartButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: var(--background);
+  border: 1px solid var(--grey-border);
+  font-size: 1.1rem;
+  color: #ef4444;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.heartButton:hover,
+.heartButton:focus-visible {
+  transform: translateY(-1px);
+  background: #ffe4e6;
+  border-color: #fb7185;
+}
+
+.heartButtonActive {
+  background: #fee2e2;
+  border-color: #fb7185;
+}
+
+.emptyState {
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  background: var(--background);
+  color: var(--grey-text);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--grey-border);
+}
+
+.emptyState h2 {
+  margin: 0 0 0.5rem;
+  color: inherit;
+}
+
+.emptyState p {
+  margin: 0 0 1rem;
+}
+
+.emptyAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  background: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .topBar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .controls {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .select {
+    flex: 1;
+  }
+
+  .itemCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .itemActions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

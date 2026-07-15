@@ -1,0 +1,539 @@
+.pageShell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.headingRow {
+  margin-bottom: 1.5rem;
+}
+
+.backLink {
+  color: var(--primary-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.messageBlock {
+  padding: 2rem;
+  border-radius: 12px;
+  background: var(--background);
+  box-shadow: var(--shadow-sm);
+  color: var(--grey-text);
+  text-align: center;
+}
+
+.errorBlock {
+  color: #b91c1c;
+}
+
+.detailPage {
+  display: grid;
+  gap: 2rem;
+}
+
+.heroSection {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  background: var(--background);
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.heroImage {
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+  flex-shrink: 0;
+}
+
+.heroContent {
+  flex: 1;
+}
+
+.subtleMeta {
+  color: var(--grey-text);
+  margin: 0 0 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--grey-text);
+  margin: 0 0.5rem;
+}
+
+.heroStats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.actionRow {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.primaryAction,
+.secondaryAction {
+  border-radius: 999px;
+  padding: 0.8rem 1rem;
+  font-weight: 600;
+}
+
+.primaryAction {
+  background: var(--primary-color);
+  color: white;
+}
+
+.secondaryAction {
+  background: var(--background);
+  color: var(--primary-dark);
+  border: 1px solid var(--grey-border);
+}
+
+.episodeActions {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+  align-items: center;
+}
+
+.progressBadge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.38rem 0.7rem;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.heroStatItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.heroStatLabel {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--grey-text);
+}
+
+.currentSeasonRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  background: var(--background);
+  border: 1px solid var(--grey-border);
+  border-radius: 18px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.currentSeasonLabel {
+  margin: 0 0 0.25rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--grey-text);
+}
+
+.currentSeasonTitle {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.seasonSelectWrapper {
+  min-width: 230px;
+}
+
+.seasonSelect {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--grey-border);
+  background: var(--background);
+  color: var(--primary-dark);
+  font-size: 1rem;
+  appearance: none;
+  box-shadow: inset 0 0 0 1px var(--grey-border);
+}
+
+.seasonSelect:focus {
+  outline: none;
+  border-color: var(--primary-dark);
+}
+
+.seasonSelectWrapper {
+  position: relative;
+}
+
+.seasonSelectWrapper::after {
+  content: "▼";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: var(--grey-text);
+  font-size: 0.8rem;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 2.5vw, 3rem);
+  line-height: 1.05;
+}
+
+.description {
+  margin: 0 0 1rem;
+  color: var(--grey-text);
+  max-width: 70ch;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.genreTag {
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  padding: 0.5rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.seasonSection {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+}
+
+.sectionDescription {
+  margin: 0;
+  color: var(--grey-text);
+}
+
+.seasonNav {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  margin-bottom: 1rem;
+}
+
+.seasonNav::-webkit-scrollbar {
+  height: 8px;
+}
+
+.seasonNav::-webkit-scrollbar-thumb {
+  background: var(--grey-border);
+  border-radius: 999px;
+}
+
+.seasonButton {
+  background: var(--grey-light);
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 0.6rem 1.1rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 48px;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.seasonButton:hover {
+  background: #eef2ff;
+}
+
+.activeSeason {
+  background: var(--primary-color);
+  color: white;
+  border-color: transparent;
+}
+
+.seasonButton span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.seasonDetailCard {
+  background: var(--background);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+}
+
+.seasonEpisodesCard {
+  background: var(--background);
+  border-radius: 16px;
+  box-shadow: var(--shadow-sm);
+  padding: 1rem;
+}
+
+.currentSeasonLabel {
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--grey-text);
+}
+
+.seasonHeader {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+}
+
+.seasonImage {
+  width: 180px;
+  height: 180px;
+  border-radius: 16px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.seasonTitle {
+  margin: 0 0 0.5rem;
+}
+
+.seasonMeta {
+  margin: 0 0 0.5rem;
+  color: var(--grey-text);
+  font-weight: 600;
+}
+
+.episodeList {
+  display: grid;
+  gap: 1rem;
+}
+
+.episodeCard {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100px 56px 1fr;
+  gap: 1rem;
+  align-items: start;
+  background: #f8fafc;
+  border-radius: 14px;
+  padding: 1rem 1rem 4.5rem;
+  overflow: hidden;
+}
+
+.episodeThumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.episodeIndex {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  background: var(--primary-light);
+  color: var(--primary-dark);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.episodeContent h4 {
+  margin: 0 0 0.5rem;
+}
+
+.episodeContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding-right: 3.5rem;
+}
+
+.episodeHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.episodeSubtitle {
+  margin: 0;
+  color: var(--grey-text);
+}
+
+.episodeDescription {
+  margin: 0.5rem 0 0;
+  color: var(--grey-text);
+  line-height: 1.5;
+}
+
+.episodeOverlayActions {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: flex;
+  gap: 0.45rem;
+  z-index: 1;
+}
+
+.episodeFavoriteButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid var(--grey-border);
+  background: var(--background);
+  color: #ef4444;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.episodeFavoriteButton:hover,
+.episodeFavoriteButton:focus-visible {
+  background: #ffe4e6;
+  border-color: #fb7185;
+}
+
+.episodeFavoriteButtonActive {
+  background: #fee2e2;
+  border-color: #fb7185;
+}
+
+.episodePlayButton {
+  position: absolute;
+  right: 0.75rem;
+  bottom: 0.75rem;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--primary-color);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.16);
+}
+
+.episodePlayButton:hover,
+.episodePlayButton:focus-visible {
+  transform: translateY(-1px);
+}
+
+.emptyState {
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: #f8fafc;
+  color: var(--grey-text);
+}
+
+@media (max-width: 900px) {
+  .heroSection {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .heroImage {
+    width: 100%;
+    height: 320px;
+  }
+
+  .episodeCard {
+    grid-template-columns: 1fr;
+    padding-bottom: 5rem;
+  }
+
+  .episodeContent {
+    padding-right: 0;
+  }
+
+  .episodeIndex {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 620px) {
+  .page {
+    padding: 1rem;
+  }
+
+  .seasonButton {
+    padding: 0.85rem;
+  }
+
+  .actionRow {
+    flex-direction: column;
+  }
+
+  .primaryAction,
+  .secondaryAction,
+  .playEpisodeButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
