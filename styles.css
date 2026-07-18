@@ -31,11 +31,13 @@
   --shadow-lg: 0 16px 35px rgba(2, 6, 23, 0.42);
 }
 
+
+
 :root[data-theme="light"] {
   --primary-color: #6366f1;
   --primary-dark: #4f46e5;
   --primary-light: #e0e7ff;
-  --grey-text: #ffffff;
+  --grey-text: black;
   --grey-light: #f3f4f6;
   --grey-border: #e5e7eb;
   --background: #ffffff;
